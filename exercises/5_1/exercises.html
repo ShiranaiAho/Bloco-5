@@ -57,8 +57,15 @@
         let backColor = document.getElementsByClassName("center-content")[0];
         backColor.style.backgroundColor = "white";
       }
-      
+
       changeBackColorWhite();
+
+      function changeH1() {
+        let text = document.getElementsByTagName("h1")[0];
+        text.innerHTML = "Exercício 5.1 - JavaScript";
+      }
+
+      changeH1();
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
