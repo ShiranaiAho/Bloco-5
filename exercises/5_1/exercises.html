@@ -68,12 +68,23 @@
       changeH1();
 
       function upperCase() {
-        for (i in document.getElementsByTagName("p")) {
-          document.getElementsByTagName("p")[i].style.textTransform = "uppercase";
+        let upper = document.getElementsByTagName("p");
+        for (let i = 0; i < upper.length; i += 1) {
+          upper[i].style.textTransform = "uppercase";
         }
       }
 
       upperCase();
+
+      function tagsP() {
+        let paragraph = document.getElementsByTagName("p");
+        for (let i = 0; i < paragraph.length; i += 1) {
+          let tag = paragraph[i].innerHTML;
+          console.log (tag);
+        }
+      }
+
+      tagsP();
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
