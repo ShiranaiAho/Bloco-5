@@ -46,13 +46,19 @@
 
       changeText();
 
-      function changeBackColor() {
+      function changeBackColorGreen() {
         let backColor = document.getElementsByClassName("main-content")[0];
         backColor.style.backgroundColor = "rgb(76, 164, 109)";
       }
       
-      changeBackColor();
+      changeBackColorGreen();
 
+      function changeBackColorWhite() {
+        let backColor = document.getElementsByClassName("center-content")[0];
+        backColor.style.backgroundColor = "white";
+      }
+      
+      changeBackColorWhite();
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
