@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //Exercicio 1
+      let h1 = document.createElement("h1");
+      document.body.appendChild(h1).innerHTML = "Exercício 5.2 - JavaScript DOM";
+
+      //Exercicio 2
+      document.body.appendChild(document.createElement("div")).className = "main-content";
+
+      //Exercicio 3
+      document.querySelector(".main-content").appendChild(document.createElement("div")).className = "center-content";
+      
+      //Exercicio 4
+      document.querySelector(".center-content").appendChild(document.createElement("p")).innerHTML = "Algum texto e é isso ai, não gostou? Toma Toddy ó que nada a ver aushuahsuahsuah";
+
+      //Exercicio 5
+      document.querySelector(".main-content").appendChild(document.createElement("div")).className = "left-content";
+
+      //Exercicio 6
+      document.querySelector(".main-content").appendChild(document.createElement("div")).className = "right-content";
+
+      //Exercicio 7
+      let img = document.querySelector(".left-content").appendChild(document.createElement("img"));
+      img.className = "small-image";
+      img.src = "https://picsum.photos/200";
+
+      //Exercicio 8
+      document.querySelector(".right-content").appendChild(document.createElement("ul"));
+      let num = ["um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
+      for (let i = 0; i < 10; i += 1) {
+        document.querySelector(".right-content").firstElementChild.appendChild(document.createElement("li")).innerHTML = num[i];
+      }
+    </script>
+  </body>
+</html>
