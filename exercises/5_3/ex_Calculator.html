@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+
+  <script>
+    window.onload = function() {
+      let solDiv = document.querySelector("#solution");
+      let square = document.querySelector("#square-input");
+      let squareBtn = document.querySelector("#square-button");
+      let half = document.querySelector("#half-input");
+      let halfBtn = document.querySelector("#half-button");
+      let fraction = document.querySelector("#percent1-input");
+      let whole = document.querySelector("#percent2-input");
+      let percentBtn = document.querySelector("#percent-button");
+      let area = document.querySelector("#area-input");
+      let areaBtn = document.querySelector("#area-button");
+      
+      squareBtn.addEventListener("click", function() {
+        let result = square.value ** 2;
+        solDiv.innerText = "The square is: " + result;
+      });
+
+      halfBtn.addEventListener("click", function() {
+        let result = half.value / 2;
+        solDiv.innerText = "The half is: " + result;
+      });
+
+      percentBtn.addEventListener("click", function() {
+        let result = whole.value / fraction.value;
+        solDiv.innerText = "The fraction is: " + result;
+      });
+
+      areaBtn.addEventListener("click", function() {
+        let result = 3.14 * area.value ** 2;
+        solDiv.innerText = "The area of circle is: " + result;
+      })
+    }
+
+   // Para fazer o bonus: Em vez dos botões receberem os Events, seriam o proprio label, e mudaria o parametro 1 para "keyup", o resto seria igual, mas claramente seria melhor tirar todos os botões.
+  </script>
+  
+</body>
+</html>
